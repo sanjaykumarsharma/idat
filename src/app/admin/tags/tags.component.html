@@ -1,0 +1,45 @@
+
+            <h3>Tags</h3>
+
+            <p-messages [value]="msgs"></p-messages>
+
+            <p-dataTable [value]="tags" selectionMode="single" [(selection)]="selectedTag" [paginator]="true" rows="15" [responsive]="true" [alwaysShowPaginator]="false">
+                <p-column field="id" header="ID" [sortable]="true"></p-column>
+                <p-column field="tag" header="Tag" [sortable]="true"></p-column>
+                <p-footer>
+                    <button pButton type="button" label="Add" icon="fa-plus" (click)="add()"></button>
+                    <button pButton type="button" label="Edit" icon="fa-pencil" (click)="edit()" [disabled]="!selectedTag"></button>
+                    <button pButton type="button" label="Remove" icon="fa-trash-o" (click)="remove()" [disabled]="!selectedTag"></button>
+                </p-footer>
+            </p-dataTable>
+
+            <p-dialog header="Tag Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+                <form #tagForm="ngForm" novalidate>
+                    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="tagForDialog">
+                        <div class="ui-g ui-g-12 ui-g-nopad">
+                            <div class="ui-g-12 ui-md-3 ui-label">
+                                <label for="id">ID</label>
+                            </div>
+                            <div class="ui-g-12 ui-md-9">
+                                <input pInputText id="id" name="id" required [(ngModel)]="tagForDialog.id" />
+                            </div>
+                        </div>
+                        <div class="ui-g ui-g-12 ui-g-nopad">
+                            <div class="ui-g-12 ui-md-3 ui-label">
+                                <label for="tag">Tag</label>
+                            </div>
+                            <div class="ui-g-12 ui-md-9">
+                                <input pInputText id="tag" name="tag" required [(ngModel)]="tagForDialog.tag" />
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </form>
+                <p-footer>
+                    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                        <button type="submit" pButton icon="fa-check" (click)="save()" label="Save" [disabled]="!tagForm.form.valid"></button>
+                    </div>
+                </p-footer>
+            </p-dialog>
+
