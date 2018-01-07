@@ -1,13 +1,13 @@
 <app-admin-nav></app-admin-nav>
-
+<button click=(toggle)>Click Me</button>
 <div class="content-wrapper mt-5">
     <div class="row">
-        <div class="col-md-3" style="padding-right:0px">
+        <div class="col-md-3" style="padding-right:0px" *ngIf="hide">
             <app-admin-sidebar></app-admin-sidebar>
         </div>
         <div class="col-md-9">
-          <br>
-          <router-outlet></router-outlet>
+            <br>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

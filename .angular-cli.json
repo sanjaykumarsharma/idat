@@ -21,8 +21,8 @@
             "styles.css",
             "../node_modules/bootstrap-beta/dist/css/bootstrap.min.css",
             "../node_modules/font-awesome/css/font-awesome.min.css",
-            "../node_modules/primeng/resources/themes/bootstrap/theme.css",
-            "../node_modules/primeng/resources/primeng.min.css"
+            "assets/css/theme.css",
+            "assets/css/primeng.css"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",

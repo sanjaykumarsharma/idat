@@ -36,6 +36,12 @@ import { TagsComponent } from './admin/tags/tags.component';
 import { AdminMainLayoutComponent } from './admin/admin-main-layout/admin-main-layout.component';
 import { TempComponent } from './temp/temp.component';
 import { AuthService } from './_guards/auth.service';
+import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
@@ -48,7 +54,13 @@ import { AuthService } from './_guards/auth.service';
     TagsComponent,
     AdminMainLayoutComponent,
     IndexComponent,
-    TempComponent
+    TempComponent,
+    NavComponent,
+    AboutComponent,
+    ProfileComponent,
+    ContactComponent,
+    FooterComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

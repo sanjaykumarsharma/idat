@@ -6,10 +6,15 @@ import { IndexComponent } from './index/index.component';
 import { AdminMainLayoutComponent } from './admin/admin-main-layout/admin-main-layout.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { TempComponent } from './temp/temp.component';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
-    { path: '', component: TempComponent },
-    { path: 'demo', component: IndexComponent },
+    { path: '', component: IndexComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: 'portfolio', component: ProfileComponent },
     { path: 'admin/login', component: AdminLoginComponent },
     { path: 'admin', component: AdminMainLayoutComponent, canActivateChild: [AuthGuard], children: [
         { path: 'home', component: HomeComponent },
