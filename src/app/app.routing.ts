@@ -9,12 +9,15 @@ import { TempComponent } from './temp/temp.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
     { path: '', component: IndexComponent },
+    { path: 'home', component: IndexComponent },
     { path: 'about', component: AboutComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'portfolio', component: ProfileComponent },
+    { path: 'contact', component: ContactComponent },
     { path: 'admin/login', component: AdminLoginComponent },
     { path: 'admin', component: AdminMainLayoutComponent, canActivateChild: [AuthGuard], children: [
         { path: 'home', component: HomeComponent },

@@ -1,0 +1,22 @@
+.c_banner {
+    background: url(/../../assets/images/contact.jpg) no-repeat top;
+    min-height: 300px !important;
+}
+
+.contact-form-input {
+    height: 62px;
+    border: 1px solid rgb(106, 166, 245);
+}
+
+.contact-form-textarea {
+    border: 1px solid rgb(106, 166, 245);
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.block-with-errors {
+    color: red;
+}

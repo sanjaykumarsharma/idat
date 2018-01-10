@@ -1,3 +1,7 @@
 .s_banner {
-    background: url(/../../assets/images/services.jpg) no-repeat center center fixed;
+    background: url(/../../assets/images/services.jpg) no-repeat top;
+}
+
+.current-page {
+    background-color: #111010;
 }

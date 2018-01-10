@@ -1,3 +1,4 @@
 .about_banner {
-    background: url(/../../assets/images/about.jpg) no-repeat center center fixed;
+    background: url(/../../assets/images/about.jpg) no-repeat top;
+    min-height: 500px !important;
 }

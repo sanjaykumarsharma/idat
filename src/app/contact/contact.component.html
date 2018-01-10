@@ -1,3 +1,125 @@
-<p>
-  contact works!
-</p>
+<app-nav></app-nav>
+
+<div class="c_banner banner">
+    <div class="container">
+        <h3>Contact</h3>
+
+        <div class="breadcrumb1">
+            <ul _ngcontent-c5="">
+                <li class="icon6"><a routerlink="/home" href="/home">Home</a></li>
+                <li class="current-page">Contact</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container" style="padding-top:10px">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="home-banner-heading wow visibility: visible; animation-delay: 0.5s; animation-name: bounceInDown" data-wow-duration="2s" data-wow-delay="0s" style="visibility: visible; animation-duration: 2s; animation-delay: 0s; animation-name:bounceInDown; visibility: visible; animation-delay:0.5s; animation-name: bounceInDown;font-size:40px">Let's Get In Touch!</h2>
+
+            <form role="form" class="mt-30 shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group has-error">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" placeholder="Your Name" id="name" class="form-control contact-control contact-form-input" name="name" ngModel required #name="ngModel">
+                            <div class="block-with-errors" *ngIf="!name.valid && name.touched">
+                                <ul class="list-unstyled">
+                                    <li>Please enter your name</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group has-error">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" placeholder="Your Email" id="email" class="form-control contact-control contact-form-input" name="email" ngModel required email #email="ngModel">
+                            <div class="block-with-errors" *ngIf="!email.valid && email.touched">
+                                <ul class="list-unstyled">
+                                    <li>Please enter your Email</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group has-error">
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" placeholder="Your Subject" id="msg_subject" class="form-control contact-control contact-form-input" name="subject" ngModel required #subject="ngModel">
+                            <div class="block-with-errors" *ngIf="!subject.valid && subject.touched">
+                                <ul class="list-unstyled">
+                                    <li>Please enter your message subject</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group has-error">
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea placeholder="Your Message" rows="10" id="message" class="form-control contact-form-textarea" name="message" ngModel #message="ngModel" required></textarea>
+                            <div class="block-with-errors" *ngIf="!message.valid && message.touched">
+                                <ul class="list-unstyled">
+                                    <li>Write your message</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-12">
+                    <button class="btn btn-common btn-lg btn-block disabled" name="submit" style="pointer-events: all; cursor: pointer;" [disabled]="!f.valid"><i class="fa fa-envelope"></i> Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="col-md-4 clearfix">
+            <div id="google-map-contact2"></div>
+            <div class="contact-info2 mt-30">
+                <h2 class="small-title">Contact Info</h2>
+                <ul class="contact-info2">
+                    <li>
+                        <p><strong><i class="fa fa-map-marker"></i> Address:</strong> 2367 Nash Street , Dearborn, Michigan</p>
+                    </li>
+                    <li>
+                        <p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">yourmail@gmail.com</a></p>
+                    </li>
+                    <li>
+                        <p><strong><i class="fa fa-phone"></i> Phone:</strong> +313-240-4015</p>
+                    </li>
+                    <li>
+                        <p><strong><i class="fa fa-print"></i> Fax:</strong> +313-555-4015</p>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<!-- <div class="container" style="padding-top:10px">
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="home-banner-heading wow visibility: visible; animation-delay: 0.5s; animation-name: bounceInDown" data-wow-duration="2s" data-wow-delay="0s" style="visibility: visible; animation-duration: 2s; animation-delay: 0s; animation-name:bounceInDown; visibility: visible; animation-delay:0.5s; animation-name: bounceInDown;font-size:40px">Let's Get In Touch!</h2>
+
+
+            <form #tagForm="ngForm" novalidate>
+                <div class="ui-grid ui-grid-responsive ui-fluid">
+                    <div class="ui-g ui-g-12 ui-g-nopad">
+                        <div class="ui-g-12 ui-md-3 ui-label">
+                            <label for="id">ID</label>
+                        </div>
+                        <div class="ui-g-12 ui-md-9">
+                            <input pInputText id="id" name="id" required />
+                        </div>
+                    </div>
+                    <div class="ui-g ui-g-12 ui-g-nopad">
+                        <div class="ui-g-12 ui-md-3 ui-label">
+                            <label for="tag">Tag</label>
+                        </div>
+                        <div class="ui-g-12 ui-md-9">
+                            <input pInputText id="tag" name="tag" required />
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div> -->
+
+<app-footer></app-footer>

@@ -319,3 +319,7 @@ nav.fill ul li a:hover:after {
         border-bottom: none;
     }
 } */
+
+.no-ul:hover {
+    text-decoration: none;
+}
