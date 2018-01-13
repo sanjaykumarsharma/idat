@@ -68,6 +68,14 @@
                 </div>
             </form>
         </div>
+        <div class="col-md-4">
+            <div *ngIf="message_sent" style="padding-top: 45px;">
+                <b>Thank you for getting in touch!</b><br><br>
+
+                <p>We appreciate you contacting us about <span class="font-italic">{{email_subject}}</span> . One of our colleagues will get back to you shortly.</p><br>
+                <p>Have a great day!</p>
+            </div>
+        </div>
         <!-- <div class="col-md-4 clearfix">
             <div id="google-map-contact2"></div>
             <div class="contact-info2 mt-30">
